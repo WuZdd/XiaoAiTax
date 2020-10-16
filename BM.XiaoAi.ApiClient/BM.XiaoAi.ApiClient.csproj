@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <Version>0.6.2</Version>
+    <PackageLicenseUrl>https://github.com/WuZdd/XiaoAiTax/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/WuZdd/XiaoAiTax</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/WuZdd/XiaoAiTax</RepositoryUrl>
+    <PackageTags>BM.XiaoAiTax</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>小爱个税申报WebApi连接库</Description>
+    <Copyright>WuZdd</Copyright>
+    <Authors>WuZdd</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="WebApiClient.JIT" Version="1.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BM.XiaoAi.ApiClient.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

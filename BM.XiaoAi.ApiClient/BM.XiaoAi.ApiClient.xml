@@ -1,0 +1,2754 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BM.XiaoAi.ApiClient</name>
+    </assembly>
+    <members>
+        <member name="T:BM.XiaoAi.ApiClient.ApiContract.IAuthContract">
+            <summary>
+            权鉴相关接口
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.IAuthContract.GetToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            获取token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.IAuthContract.RefreshToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.RefreshTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            刷新token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiContract.ITaxContract">
+            <summary>
+            个税相关接口
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.PersonnelSubmission(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.PersonnelInfoSubmissionRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            人员报送
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetPersonnelSubmissionResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            人员报送状态查询
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="acceptId"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxCalculation(System.String,System.String,System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            税款计算服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="sdyf"></param>
+            <param name="acceptId"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxCalculationResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            税款计算查询服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="skjsAcceptId">算税任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.CumulativeTaxDataDownload(System.String,System.String,System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            累计算税数据下载
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sdyf">所得月份</param>
+            <param name="acceptId">人员报送反馈受理ID</param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetCumulativeTaxData(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            累计算税数据下载查询
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="ljssAcceptId">累计算税数据下载任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxDeclaration(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxDeclarationResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报状态查询服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sbrwAcceptId">申报任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxDeclarationFeedback(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报反馈服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sbrwAcceptId">申报任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxDeclarationFeedbackResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报反馈状态查询服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sbfkrwAcceptId">申报反馈任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxDeclarationCancel(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationCancelRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报作废服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxDeclarationCancelResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个数申报作废状态查询服务
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="zfrwAcceptId">作废任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiFactory">
+            <summary>
+            Api静态工厂
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiFactory.CreateAuthClient">
+            <summary>
+            创建权鉴相关Client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ApiFactory.CreateTaxClient">
+            <summary>
+            创建个税相关Client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.ApiParameterModelBase">
+            <summary>
+            约定Api交互参数模型的基类
+            <para>
+            与小爱进行交互的参数都直接或者间接继承此类
+            </para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentEquityIncentiveInfo">
+            <summary>
+            非居民个人股权激励
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentEquityIncentiveInfo.ShiyongGongshi">
+            <summary>
+            适用公式
+            <para>证照类型为居民身份证不能填写，若填写此项则收入额无需填写</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentEquityIncentiveInfo.LeijiShourue">
+            <summary>
+            本年累计股权激励（不含本月）
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentEquityIncentiveInfo.YiKoujiaoShuie">
+            <summary>
+            本年累计已扣缴税额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase">
+            <summary>
+            非居民所得信息基类
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.JingneiTianshu">
+            <summary>
+            境内工作天数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.JingwaiTianshu">
+            <summary>
+            境外工作天数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.JingneiZhifu">
+            <summary>
+            境内支付
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.JingwaiZhifu">
+            <summary>
+            境外支付
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.ShijiJuanzengE">
+            <summary>
+            实际捐赠额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.JuanzengFangshi">
+            <summary>
+            捐赠方式
+            <para>[限额扣除]/[全额扣除]/混合。默认[限额扣除]</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.ZhunyuKouchuJuanzengE">
+            <summary>
+            准予扣除捐赠额
+            <para>【捐赠方式】填混合时，该字段可填写，否则填写无效</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.YingNashuiSuodeE">
+            <summary>
+            应纳税所得额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.YingNashuie">
+            <summary>
+            应纳税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentIncomeInfoBase.YingKoujiaoShuie">
+            <summary>
+            应扣缴税额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentLaborIncomeInfo">
+            <summary>
+            非居民劳务报酬
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentLaborIncomeInfo.SuodeXiangmu">
+            <summary>
+            *所得项目代码
+            </summary>
+            <remarks>
+            <list type="table">
+            <item>0401-一般劳务报酬所得</item>
+            <item>0402-保险营销员劳务报酬所得</item>
+            <item>0403-证券经纪人劳务报酬所得</item>
+            <item>0499-其他劳务报酬所得</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentLaborIncomeInfo.YunxuKouchuShuifei">
+            <summary>
+            允许扣除的税费
+            <para>填写按照个人所得税法及其他法律法规规定，实际可扣除的税费</para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentMoneyAwardInfo">
+            <summary>
+            外籍人数月奖金
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentMoneyAwardInfo.ShiyongGongshi">
+            <summary>
+            适用公式
+            <para>证照类型为居民身份证不能填写，若填写此项则收入额无需填写</para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentNormalSalaryInfo">
+            <summary>
+            非居民正常工资薪金
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentNormalSalaryInfo.ShiyongGongshi">
+            <summary>
+            适用公式
+            <para>证照类型为居民身份证不能填写，若填写此项则收入额无需填写</para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.NonResident.NonResidentTerminationLaborContractInfo">
+            <summary>
+            非居民解除劳动合同一次性补偿信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo">
+            <summary>
+            个人偶然所得
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.ShifouHuizongShenbao">
+            <summary>
+            是否汇总申报 [是]/[否]。凡不为[是]均为[否]
+            </summary>
+            <remarks>
+            如[是]则代表这一条数据时汇总申报数据。汇总申报姓名、证照类型、证照号码均无须填写，减免税额不支持填写。<para/>
+            企业需在税局开通汇总申报才可录入汇总数据，否则该数据将返回错误：“如需汇总申报，请先前往办税服务厅进行开通”
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.SuodeXiangmu">
+            <summary>
+            所得项目代码
+            </summary>
+            <remarks>
+            1005-社会福利募捐奖金、体彩奖金
+            <list type="table">非居民偶然所得
+            <item>1001-省级、部级、军级奖金</item>
+            <item>1002-外国组织和国际组织奖金</item>
+            <item>1003-见义勇为奖金</item>
+            <item>1004-举报、协查违法犯罪奖金</item>
+            <item>1006-有奖发票奖金</item>
+            <item>1007-随机赠送礼品</item>
+            <item>1099-其他偶然所得</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.ShijiJuanzengE">
+            <summary>
+            实际捐赠额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.JuanzengLeixing">
+            <summary>
+            捐赠方式
+            <para>[限额扣除]/[全额扣除]/ [混合]。默认[限额扣除]</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.ZhunyuKouchuJuanzengE">
+            <summary>
+            准予扣除捐赠额
+            <para>【捐赠方式】填混合时，该字段可填写，否则填写无效</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.YingNashuiSuodeE">
+            <summary>
+            应纳税所得额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.YingNashuie">
+            <summary>
+            应纳税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Income.PersonalIncidentalIncomeInfo.YingKoujiaoShuie">
+            <summary>
+            应扣缴税额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalBasicInfo">
+            <summary>
+            个人基本信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalBasicInfo.LicenseType">
+            <summary>
+            *证照类型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalBasicInfo.LicenseNumber">
+            <summary>
+            *证照号码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalBasicInfo.FullName">
+            <summary>
+            *姓名
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase">
+            <summary>
+            个人所得信息基类
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.ShifouShanchu">
+            <summary>
+            是否删除
+            <para>
+            是/否，默认为否。[是]代表删除该人员在该所得项目中的历史数据
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.Shourue">
+            <summary>
+            当期收入额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.MianshuiSuode">
+            <summary>
+            当期免税所得
+            <para>如填写该项数据，需要在减免附表中填写【减免方式】为[免税所得]的附表数据</para>
+            </summary>
+            <remarks>
+            *注：预扣预缴中“免税收入”和“免税所得”是同一概念，几处接口中有不同的表述和名称，实际是一样的。
+            此处统一用“免税所得”表述
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.Qita">
+            <summary>
+            其他 按法律规定可以在税前扣除的项目
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.JianmianShuie">
+            <summary>
+            减免税额
+            <para>如填写该项数据，需要在减免附表中填写【减免方式】为[减免税额]的附表数据</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.Beizhu">
+            <summary>
+            备注
+            <para>其他有内容则必填 <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalIncomeInfoBase.Qita"/></para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult">
+            <summary>
+            人员算税结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.YingNashuiSuodeE">
+            <summary>
+            应纳税所得额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.Shuilv">
+            <summary>
+            税率
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.SusuanKouchuShu">
+            <summary>
+            速算扣除数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.YingNashuie">
+            <summary>
+            应纳税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.LeijiJianmianShuie">
+            <summary>
+            减免税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.YingKoujiaoShuie">
+            <summary>
+            应扣缴税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.LeijiYiKoujiaoShuie">
+            <summary>
+            已预交税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.YingButuiShuie">
+            <summary>
+            应补退税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.Status">
+            <summary>
+            算税状态代码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalTaxResult.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule">
+            <summary>
+            商业健康保险附表
+            </summary>
+            <remarks>
+            商业健康保险附表只适用于预扣预缴【工资薪金】和【劳务报酬】填写了[商业健康保险]数据的所得项目。附表中的[本期扣除金额]合计必须等于所得项目中填写的[商业健康保险]金额。
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.ShuiyouShibiema">
+            <summary>
+            *税优识别码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.BaodanShengxiaoRiqi">
+            <summary>
+            *保单生效日期
+            格式严格限制 YYYY-MM-DD
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.NianduBaofei">
+            <summary>
+            *年度保费
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.YueduBaofei">
+            <summary>
+            *月度保费
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.BenqiKouchuJinE">
+            <summary>
+            本期扣除金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.Status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.CommercialHealthInsuranceSchedule.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionSchedule">
+            <summary>
+            捐赠扣除附表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionSchedule.SuodeXiangmu">
+            <summary>
+            *所得项目代码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionSchedule.JuanzengMingxiLiebiao">
+            <summary>
+            捐赠明细列表
+            </summary>
+            <remarks>
+            每个捐赠附表主体都应包含至少1个捐赠明细，数组内为json对象
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionSchedule.Status">
+            <summary>
+            处理状态
+            </summary>
+            <remarks>
+            输出字段。-1：没有对应的捐赠扣除主体；1：未填写明细；2：已填写明细；3：明细待完善；4：无须填写明细。
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionSchedule.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+            <remarks>
+            输出字段。当处理有错误时通过该字段返回错误信息。该错误信息不包含扣除明细中的错误。
+            </remarks>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail">
+            <summary>
+            捐赠扣除明细
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.ShouzengDanweiMingcheng">
+            <summary>
+            *受赠单位名称
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.ShouzengDanweiNashuirenShibiehao">
+            <summary>
+            受赠单位纳税人识别号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.JuanzengPingzhenghao">
+            <summary>
+            捐赠凭证号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.JuanzengRiqi">
+            <summary>
+            *捐赠日期 日期格式：YYYY-MM-DD。不可为空
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.JuanzengJinE">
+            <summary>
+            *捐赠金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.KouchuBili">
+            <summary>
+            扣除比例
+            <para>取值：【30%、100%】。不填、填写非取值范围，均默认30%</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.ShijiJuanzenge">
+            <summary>
+            实际捐赠额
+            </summary>
+            <remarks>
+            目前在系统层面实际捐赠额和捐赠金额、扣除比例无关联关系。但是在业务层面存在关联关系
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.Beizhu">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.Status">
+            <summary>
+            处理状态
+            </summary>
+            <remarks>
+            输出字段。-1：失败；0：成功；1：提示
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.DonationDeductionDetail.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+            <remarks>
+            输出字段。当处理有错误时通过该字段返回错误信息
+            </remarks>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule">
+            <summary>
+            减免事项附表
+            </summary>
+            <remarks>
+            减免事项附表适用于预扣预缴、分类所得、非居民收入，只要所得项目中填写了[减免税额]或[免税收入]项数据，就必须有对应的减免事项附表与之对应。<para />
+            并满足如下条件：减免方式为减免税额的所有附表的[减免金额]合计=所得项目中填写的[减免税额]；减免方式为免税收入的所有附表的[减免金额]合计=所得项目中填写的[免税收入]。
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.JianmianFangshi">
+            <summary>
+            *减免方式 0-减免税额；1-免税收入
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.SuodeXiangmu">
+            <summary>
+            *所得项目代码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.JianmianShixiang">
+            <summary>
+            *减免事项 见《减免事项字典》
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.JianmianXingzhi">
+            <summary>
+            *减免性质 见《减免事项字典》
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.JianmianJinE">
+            <summary>
+            减免税额/免税收入
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.Status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.ReductionItemSchedule.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule">
+            <summary>
+            税延型商业养老保险附表
+            </summary>
+            <remarks>
+            商业健康保险附表只适用于预扣预缴【工资薪金】和【劳务报酬】填写了[税延养老保险]数据的所得项目。附表中的[本期扣除金额]合计必须等于所得项目中填写的[税延养老保险]金额
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.ShuiyanYanglaoZhanghaoBianhao">
+            <summary>
+            *税延养老账号编号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.ShenbaoKouchuYuefen_Qi">
+            <summary>
+            *申报扣除月份起 格式严格限制YYYYMM
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.ShenbaoKouchuYuefen_Zhi">
+            <summary>
+            *申报扣除月份止 格式严格限制YYYYMM。月份止不能小于月份起
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.BaoshuiJiaoyanma">
+            <summary>
+            *报税校验码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.NianduBaofei">
+            <summary>
+            *年度保费
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.YueduBaofei">
+            <summary>
+            *月度保费
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.BenqiKouchuJinE">
+            <summary>
+            本期扣除金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.Status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Reduction.TaxDeferredEndowmentInsuranceSchedule.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo">
+            <summary>
+            个人股权激励收入信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.ShiyongGongshi">
+            <summary>
+            适用公式
+            <para>
+            证照类型为居民身份证不能填写，若填写此项则收入额无需填写
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.JingneiTianshu">
+            <summary>
+            境内工作天数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.JingwaiTianshu">
+            <summary>
+            境外工作天数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.JingneiZhifu">
+            <summary>
+            境内支付
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.JingwaiZhifu">
+            <summary>
+            境外支付
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.LeijiShourue">
+            <summary>
+            本年累计股权激励（不含本月）
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalEquityIncentiveInfo.ZhunyuKouchuJuanzengE">
+            <summary>
+            本年累计准予扣除的捐赠额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo">
+            <summary>
+            个人保险、债券劳务报酬信息
+            </summary>
+            <remarks>
+            上期累计收入、上期累计费用、上期累计免税收入均不包含本期 <para/>
+            累计减除费用、其他扣除合计、累计准予扣除捐赠额、累计减免税额为包含本期的累计值
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.SuodeXiangmu">
+            <summary>
+            所得项目代码
+            <para>
+            0402-保险营销员劳务报酬所得 0403-证券经纪人劳务报酬所得
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.ShangyeJiankangBaoxian">
+            <summary>
+            商业健康保险
+            <para>如填写该项数据，需要填写商业健康保险附表</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.ShuiyanYanglaoBaoxian">
+            <summary>
+            税延养老保险
+            <para>如填写该项数据，需要填写税延养老保险附表</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.YunxuKouchuShuifei">
+            <summary>
+            允许扣除税费
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.Feiyong">
+            <summary>
+            费用 <para>= 本期收入 * 20%</para> 
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.ZhanyeChengben">
+            <summary>
+            展业成本 <para>=（本期收入 - 费用）* 25%</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.JianchuFeiyong">
+            <summary>
+            减除费用 <para>= 5000元/月</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.LeijiShourue">
+            <summary>
+            上期累计收入
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.LeijiFeiyong">
+            <summary>
+            上期累计费用
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.LeijiMianshuiSuode">
+            <summary>
+            上期累计免税收入
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.LeijiJianchuFeiyong">
+            <summary>
+            累计减除费用
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.LeijiZhunyuKouchuJuanzengE">
+            <summary>
+            累计准予扣除捐赠额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.ZhuanxiangKouchuHeji">
+            <summary>
+            专项扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.QitaKouchuHeji">
+            <summary>
+            其他扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.ZhuanxiangFujiaKouchuHeji">
+            <summary>
+            专项附加扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalInsuranceSecuritiesInfo.KouchuXiangmuHeji">
+            <summary>
+            扣除项目合计
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo">
+            <summary>
+            个人劳务报酬信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.SuodeXiangmu">
+            <summary>
+            所得项目代码
+            <para>
+            0401-一般劳务报酬所得 0499-其他劳务报酬所得
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.ShangyeJiankangBaoxian">
+            <summary>
+            商业健康保险
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.ShuiyanYanglaoBaoxian">
+            <summary>
+            税延养老保险
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.YunxuKouchuShuifei">
+            <summary>
+            允许扣除的税费
+            </summary>
+            <remarks>
+            填写按照个人所得税法及其他法律法规规定，实际可扣除的税费
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.JianchuFeiyong">
+            <summary>
+            减除费用
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.ZuanxiangKouchuHeji">
+            <summary>
+            专项扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.QitaKouchuHeji">
+            <summary>
+            其他扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.ZhuanxiangFujiaKouchuHeji">
+            <summary>
+            专项附加扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.KouchuXiangmuHeji">
+            <summary>
+            扣除项目合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalLaborIncomeInfo.LeijiYiKoujiaoShuie">
+            <summary>
+            已预交税额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalMoneyAwardInfo">
+            <summary>
+            个人全年一次性奖金信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalMoneyAwardInfo.ZhuiyuKouchuJuanzengE">
+            <summary>
+            准予扣除捐赠额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalRemunerationInfo">
+            <summary>
+            个人稿酬信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalRemunerationInfo.JianchuFeiyong">
+            <summary>
+            减除费用
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalRemunerationInfo.Feiyong">
+            <summary>
+            费用
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo">
+            <summary>
+            个人解除劳务合同所得信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.ShifouShanchu">
+            <summary>
+            是否删除
+            <para>
+            是/否，默认为否。[是]代表删除该人员在该所得项目中的历史数据
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.YicixingBuchang">
+            <summary>
+            一次性补偿
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.MianshuiSuode">
+            <summary>
+            免税收入
+            <para>如填写该项数据，需要在减免附表中填写【减免方式】为[免税所得]的附表数据</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.Qita">
+            <summary>
+            其他 按法律规定可以在税前扣除的项目
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.JianmianShuie">
+            <summary>
+            减免税额
+            <para>如填写该项数据，需要在减免附表中填写【减免方式】为[减免税额]的附表数据</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.ZhunyuKouchuJuanzengE">
+            <summary>
+            准予扣除捐赠额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.Beizhu">
+            <summary>
+            备注
+            <para>其他有内容则必填 <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.Withholding.PersonalTerminationLaborContractInfo.Qita"/></para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo">
+            <summary>
+            人员正常工资薪金信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ShifouShanchu">
+            <summary>
+            是否删除
+            <para>
+            是/否，默认为否。[是]代表删除该人员在该所得项目中的历史数据
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.Shourue">
+            <summary>
+            当期收入额
+            </summary>
+            <remarks>
+            当选择了适用公式1到公式4，则收入额会根据公式通过计算获得，不取通过服务传的 sre。 
+            若选择公式5，则收入额取通过服务传的sre
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ShiyongGongshi">
+            <summary>
+            适用公式 <para>证照类型为居民身份证不能填写，非居民不适用公式</para>
+            </summary>
+            <remarks>
+            当填写了适用公式，且不是公式5，则可以填写以下四项 
+            <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingneiTianshu"/> <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingwaiTianshu"/> <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingneiZhifu"/> <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingwaiZhifu"/>，<para/>
+            一般情况下，境内工作天数+境外工作天数=当前所得月份总天数
+            <list type="table">
+            <item>[公式1]：=境内支付*境内工作天数/公历天数</item>
+            <item>[公式2]：=收入总额*境内工作天数/公历天数</item>
+            <item>[公式3]：=收入总额*[1-（境内支付/收入总额）*（境外工作天数/公历天数）]</item>
+            <item>[公式4]：=境内支付</item>
+            <item>[公式5]：=收入额</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingneiTianshu">
+            <summary>
+            境内工作天数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingwaiTianshu">
+            <summary>
+            境外工作天数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingneiZhifu">
+            <summary>
+            境内支付金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JingwaiZhifu">
+            <summary>
+            境外支付金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.MianshuiSuode">
+            <summary>
+            当期免税收入
+            <para>如填写该项数据，需要在减免附表中填写【减免方式】为[免税所得]的附表数据</para>
+            </summary>
+            <remarks>
+            *注：预扣预缴中“免税收入”和“免税所得”是同一概念，几处接口中有不同的表述和名称，实际是一样的。
+            此处统一用“免税所得”表述
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ZhunyuKouchuJuanzeng">
+            <summary>
+            准予扣除捐赠额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JibenYanglaoBaoxian">
+            <summary>
+            基本养老保险
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JibenYiliaoBaoxian">
+            <summary>
+            基本医疗保险
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ShiyeBaoxian">
+            <summary>
+            失业保险
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ZhufangGongjijin">
+            <summary>
+            住房公积金
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ZinvJiaoyuZhichu">
+            <summary>
+            子女教育支出
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ShanyangLaorenZhichu">
+            <summary>
+            赡养老人支出
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ZhufangDaikuanLixiZhichu">
+            <summary>
+            住房贷款利息支出
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ZhufangZujinZhichu">
+            <summary>
+            住房租金支出
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.DabingYiliaoZhichu">
+            <summary>
+            大病医疗支出
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JixuJiaoyuZhichu">
+            <summary>
+            继续教育支出
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.Nianjin">
+            <summary>
+            年金
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ShangyeJiankangBaoxian">
+            <summary>
+            商业健康保险
+            <para>如填写该项数据，需要在减免附表中填写商业健康保险附表</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.ShuiyanYanglaoBaoxian">
+            <summary>
+            税延养老保险
+            <para>如填写该项数据，需要在减免附表中填写税延养老保险附表</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.Qita">
+            <summary>
+            其他 按法律规定可以在税前扣除的项目
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.JianmianShuie">
+            <summary>
+            减免税额
+            <para>如填写该项数据，需要在减免附表中填写【减免方式】为[减免税额]的附表数据</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.Beizhu">
+            <summary>
+            备注
+            <para>其他有内容则必填 <see cref="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.Qita"/></para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiShouru">
+            <summary>
+            上期累计收入
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiMianshuiShouru">
+            <summary>
+            上期累计免税收入
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiJianchuFeiyong">
+            <summary>
+            累计减除费用
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiZhuanxiangKouchuHeji">
+            <summary>
+            累计专项扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiQitaKouchuHeji">
+            <summary>
+            累计其他扣除合计
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiZhunyuKouchuJuanzeng">
+            <summary>
+            累计准予扣除的捐赠额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Generic.PersonalNormalSalaryInfo.LeijiZhuanxiangFujiaKouchuHeji">
+            <summary>
+            累计专项附加扣除合计
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel">
+            <summary>
+            获取令牌请求模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel.GrantType">
+            <summary>
+            固定值 client_credential
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel.ClientId">
+            <summary>
+            客户端ID
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel.ClientSecret">
+            <summary>
+            客户端访问秘钥
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.RefreshTokenRequestModel.GrantType">
+            <summary>
+            固定值 refresh_token
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.RefreshTokenRequestModel.RefreshToken">
+            <summary>
+            刷新token 获取token时一并获取的 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.IAuthContract.GetToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.IExtraUriPathRequestModel">
+            <summary>
+            包含额外请求路径信息的请求模型接口
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.IExtraTaxUriPathRequestModel">
+            <summary>
+            包含额外个税请求路径信息的请求模型接口
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.IExtraTaxUriPathRequestModel.AreaId">
+            <summary>
+            *行政区划代码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.IExtraTaxUriPathRequestModel.NashuirenShibiehao">
+            <summary>
+            *纳税人识别号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.IExtraTaxUriPathRequestModel.SuodeYuefen">
+            <summary>
+            *所得月份
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.IExtraTaxUriPathRequestModel.BumenBianhao">
+            <summary>
+            部门编号
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.RequestModel">
+            <summary>
+            约定请求参数的模型，它是一个抽象类
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail">
+            <summary>
+            纳税人详情
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Nationality">
+            <summary>
+            *国籍（地区）
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Gender">
+            <summary>
+            *性别 [男]/[女]
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.BirthDate">
+            <summary>
+            *出生日期
+            <para>
+            yyyy-mm-dd 不能大于等于当前系统时间
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Status">
+            <summary>
+            纳税人状态 [正常]/[非正常]
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.IsDeductionExpenses">
+            <summary>
+            是否扣除减除费用 [是]/[否]
+            <para>
+            默认为是，如果填否，则在计算预扣预缴税款（正常工资薪金所得、保险营销员和证券经纪人的劳务报酬）时，减除费用默认为0，不可减除。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Education">
+            <summary>
+            学历
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.IsDisabled">
+            <summary>
+            是否残疾 [是]/[否]
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.IsMartyrsFamilies">
+            <summary>
+            是否烈属 [是]/[否]
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.IsOldAndLonely">
+            <summary>
+            是否孤老 [是]/[否]
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.DisabilityCardNumber">
+            <summary>
+            残疾证号
+            <para>
+            【是否残疾】填[是]时必填
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.MartyrsFamilyCardNumber">
+            <summary>
+            烈属证号
+            <para>
+            【是否烈属】填[是]时必填
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.HabitualResidence_Province">
+            <summary>
+            经常居住地_省
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.HabitualResidence_City">
+            <summary>
+            经常居住地_市
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.HabitualResidence_District">
+            <summary>
+            经常居住地_区县
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.HabitualResidence_Street">
+            <summary>
+            经常居住地_街道
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.HabitualResidence">
+            <summary>
+            经常居住地_详细
+            <para>
+            除了街道不要求必填以外，其他四项全部填写或全部不填写。见《居住地字典》需要以汉字的形式填写
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PermanentAddress_Province">
+            <summary>
+            户籍地址_省
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PermanentAddress_City">
+            <summary>
+            户籍地址_市
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PermanentAddress_District">
+            <summary>
+            户籍地址_区县
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PermanentAddress_Street">
+            <summary>
+            户籍地址_街道
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PermanentAddress">
+            <summary>
+            户籍地址_详细
+            <para>
+            除了街道不要求必填以外，其他四项全部填写或全部不填写。见《居住地字典》需要以汉字的形式填写
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Bank">
+            <summary>
+            开户银行 见《银行字典》
+            <para>
+            银行信息如填写其中一项则其他项必填
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Bank_Province">
+            <summary>
+            开户银行省份
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Bank_Account">
+            <summary>
+            银行账号
+            <para>
+            境内、境外人员的“银行账户”输入时，只能录入8-30位的数字
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.EmploymentType">
+            <summary>
+            *任职受雇从业类型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.EmployementDate">
+            <summary>
+            任职受雇日期
+            <para>
+            yyyy-mm-dd。任职受雇从业类型为雇员、保险营销员、证券经纪人都必填。如需要申报工资薪金所得，则该字段必填。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.DepartureDate">
+            <summary>
+            离职日期
+            <para>
+            yyyy-mm-dd。雇员的【人员状态】填[非正常]时必填
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.IsMergeFiles">
+            <summary>
+            是否并档 [是]/[否]
+            <para>
+            默认为否，如果填是，则在人员报送完成后，系统会将所有标记为是的人员并且报送成功的，执行人员并档操作。
+            </para>
+            <para>
+            人员并档逐个人员进行，大批量的并档会导致接口长时间无法返回结果
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PersonalInvestmentTotal">
+            <summary>
+            个人投资总额
+            <para>
+            当为股东投资者时必填
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.Post">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.TaxpayerDetail.PersonalInvestmentProportion">
+            <summary>
+            个人投资比例
+            <para>
+            没有则不填，范围为0~100，不包含0
+            </para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail">
+            <summary>
+            外籍纳税人信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.ChineseName">
+            <summary>
+            中文名
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.OtherLicenseType">
+            <summary>
+            其他证照类型
+            <list type="number">
+            <item>当“证照类型”选择为如下类型时：
+            <para>外国人永久居留身份证 外国人工作许可证（A类）外国人工作许可证（B类）外国人工作许可证（C类）</para>
+            本项内容为必填项，且只能选择为“外国护照”</item>
+            <item>当“证照类型”选择为“港澳居民居住证”时，本项内容为必填项，且只能选择为“港澳居民来往内地通行证”；</item>
+            <item>当“证照类型”选择为“台湾居民居住证”时，本项内容为必填项，且只能选择为“台湾居民来往大陆通行证”。</item>
+            </list>
+            <para>
+            当证照类型选择“中国护照”、“港澳居民来往内地通行证”、“台湾居民来往大陆通行证”、“外国护照”时，其他证照类型可选项中增加对应的照证类型可选项，如“外国护照”，则“其他证照类型”下拉项中也有“外国护照”，同时对应的号码规则仍有校验。非必填（用于更换护照）
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.OtherLicenseNumber">
+            <summary>
+            其他证件号码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.Birthplace">
+            <summary>
+            *出生地 详见【国籍地区字典】
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.TaxRelatedReasons">
+            <summary>
+            涉税事由
+            <para>
+            格式为：任职受雇, 转让财产, 其他
+            每个部分的值必须严格按照字典项中的值填写，否则数据无法保存。分隔符严格保证英文半角逗号,
+            如果不按照格式填写该参数，纳税人验证时无法正确截取值，可能导致某个值无法保存（不影响人员入库和报送，但是信息缺失）或者全部无法保存（返回“人员[涉税事由] 不能为空。”的错误）
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.FirstEntryDate">
+            <summary>
+            首次入境时间
+            <para>
+            雇员时必填YYYY-MM-DD
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.EstimatedDepartureDate">
+            <summary>
+            预计离境时间
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.ContactAddress_Province">
+            <summary>
+            联系地址_省
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.ContactAddress_City">
+            <summary>
+            联系地址_市
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.ContactAddress_District">
+            <summary>
+            联系地址_区县
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.ContactAddress_Street">
+            <summary>
+            联系地址_街道
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail.ContactAddress">
+            <summary>
+            联系地址_详细
+            <para>
+            除了街道不要求必填以外，其他四项全部填写或全部不填写。见《居住地字典》需要以汉字的形式填写
+            </para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel">
+            <summary>
+            累计算税数据下载请求模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel.XiazaiZhuanxiangXinxi">
+            <summary>
+            下载专项信息
+            <para>
+            是/否。默认为“否”，即不主动下载专项，预填时只以现有专项为预填依据
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel.XiazaiLeijiShuju">
+            <summary>
+            下载累计数据
+            <para>
+            是/否。默认为“是”，即需要下载累计数据再计算税款
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel.Data">
+            <summary>
+            data对象，用来定义需要返回累计数据的人员
+            <para>实测不能为空</para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadPersonnelData">
+            <summary>
+            累计算税数据下载人员对象 用来定义需要返回累计数据的人员
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadPersonnelData.PersonnelList">
+            <summary>
+            人员列表
+            </summary>
+            <remarks>
+            当数组为空时，将返回报送中所得月份，人员状态为正常的所有人员的累计收入和专项扣除数据，包含所有境内人员和境外人员。
+            </remarks>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.PersonnelInfoSubmissionRequestModel">
+            <summary>
+            人员信息报送请求模型
+            <para>
+            小爱约定请求都通过HttpPost的Body发送，采用utf-8编码的application/json请求 
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.PersonnelInfoSubmissionRequestModel.ZongRenshu">
+            <summary>
+            总人数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.PersonnelInfoSubmissionRequestModel.Taxpayers">
+            <summary>
+            纳税人数据 外籍人员见 <see cref="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.AlienTaxpayerDetail"/>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel">
+            <summary>
+            税款计算请求模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel.ZhuanxiangZidongKouchu">
+            <summary>
+            专项自动扣除
+            <para>[是]/[否]。默认为否。是否自动扣除专项附加。</para>
+            </summary>
+            <remarks>
+            如是则在算税前根据已有的专项附加扣除信息进行扣除，并忽略正常工资薪金中填写的专项附加扣除数据。
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel.ZongRenshu">
+            <summary>
+            总人数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel.ZongJinE">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel.Data">
+            <summary>
+            收入数据块
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.IncomeData">
+            <summary>
+            收入数据
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.IncomeData.YukouYujiao">
+            <summary>
+            预扣预缴
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.IncomeData.FenleiSuode">
+            <summary>
+            分类所得
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.IncomeData.FeijuminSuode">
+            <summary>
+            非居民所得
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao">
+            <summary>
+            预扣预缴
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.QingkongDangyueShuju">
+            <summary>
+            清空当月数据
+            <para>
+            是或否，不填默认为否（清空当前所得月份预扣预缴的全量数据）
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.ZhengchangGongziXinjinLiebiao">
+            <summary>
+            正常工资薪金列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.LaowuBaochouLiebiao">
+            <summary>
+            劳务报酬列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.GaochouSuodeLiebiao">
+            <summary>
+            稿酬所得列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.QuannianYicixingJiangjinLiebiao">
+            <summary>
+            全年一次性奖金列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.JianmianShixiangFubiaoLiebiao">
+            <summary>
+            减免事项附表列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.ShangyeJiankangBaoxianLiebiao">
+            <summary>
+            商业健康保险附表列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.ShuiyanYanglaoBaoxianLiebiao">
+            <summary>
+            税延养老保险附表列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.JiechuLaodongHetongLiebiao">
+            <summary>
+            解除劳动合同列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.GuquanJiliLiebiao">
+            <summary>
+            个人股权激励列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.BaoxianZhengquanLaowuLiebiao">
+            <summary>
+            保险营销员、证券经纪人劳务报酬列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.YukouYujiao.JuanzengFubiaoLiebiao">
+            <summary>
+            捐赠附表列表
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FenleiSuode">
+            <summary>
+            分类所得
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FenleiSuode.OuranSuodeLiebiao">
+            <summary>
+            偶然所得列表
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode">
+            <summary>
+            非居民所得
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.QingkongDangyueShuju">
+            <summary>
+            清空当月数据
+            <para>
+            是或否，不填默认为否（清空当前所得月份非居民所得的全量数据）
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.WaijiGongziXinjinLiebiao">
+            <summary>
+            正常工资薪金（外籍人工资薪金）列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.WaijiShuyueJiangjinLiebiao">
+            <summary>
+            外籍人数月奖金列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.JiechuLaodongHetongLiebiao">
+            <summary>
+            解除劳动合同列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.LaowuBaochouLiebiao">
+            <summary>
+            劳务报酬列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.JianmianShixiangFubiaoLiebiao">
+            <summary>
+            减免事项附表列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.GuquanJiliLiebiao">
+            <summary>
+            股权激励列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.JuanzengFubiaoLiebiao">
+            <summary>
+            捐赠附表列表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.FeijuminSuode.OuranSuodeLiebiao">
+            <summary>
+            偶然所得列表
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationCancelRequestModel">
+            <summary>
+            个税申报作废服务请求模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationCancelRequestModel.WangshuiXitongYonghuming">
+            <summary>
+            网税系统用户名 浙江用户特有
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationCancelRequestModel.BaobiaoLeibie">
+            <summary>
+            报表类别 例如：[“SB0701”,” SB0703”]
+            </summary>
+            <remarks>
+            SB0701：预扣预缴申报表；SB0702：分类所得申报表；SB0703：非居民申报表
+            </remarks>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationRequestModel">
+            <summary>
+            个税申报请求模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationRequestModel.Data">
+            <summary>
+            本次要申报的申报表。必填，否则不做申报操作
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationForm">
+            <summary>
+            申报表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationForm.YukouYujiao">
+            <summary>
+            预扣预缴申报表。非必填。若有该对象则会尝试申报预扣预缴申报表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationForm.FenleiSuode">
+            <summary>
+            分类所得申报表。非必填。若有该对象则会尝试申报分类所得申报表
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationForm.FeiJumin">
+            <summary>
+            非居民所得申报表。非必填。若有该对象则会尝试申报非居民所得申报表
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationFormDetail">
+            <summary>
+            申报表明细
+            </summary>
+            <remarks>
+            如填写，将在申报前核对，如果申报端系统中的申报表的总金额、总人数、应补(退)税额与传入的值不符，<para/>
+            将中止申报【工资的总金额为当前所得月份待申报人员的累计收入额之和，其他的为当期收入之和、总人数去重、ynse为应补退税额即本月应缴的金额】
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationFormDetail.ZongJinE">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationFormDetail.ZongRenshu">
+            <summary>
+            总人数 有相关所得则必填
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.DeclarationFormDetail.YingNashuie">
+            <summary>
+            应补(退)税额
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel">
+            <summary>
+            税务相关请求模型，它是一个抽象类
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.NashuirenShibiehao">
+            <summary>
+            *扣缴单位纳税人识别号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.AreaId">
+            <summary>
+            *行政区划代码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.ShimingZhanghao">
+            <summary>
+            实名账号 预留字段
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.ShimingMima">
+            <summary>
+            实名密码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.SuodeYuefen">
+            <summary>
+            *所得月份 例如：201708
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.BumenBianhao">
+            <summary>
+            部门编号 分部门报送时必选
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.Version">
+            <summary>
+            *服务版本号 默认V2.0.000
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.DengjiXuhaoId">
+            <summary>
+            主管税务机关登记序号id
+            <para>
+            报验户：从事生产经营的纳税人临时到外县（市）从事生产经营活动的，需要向经营地税务机关依法纳税的企业
+            </para>
+            <para>
+            因为报验户存在一个税号对应多个主管税务机关ID。需要用户自己把主管税务机关ID传给平台。第一次是人员报送查询中获取。由用户选择。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxRequestModel.ShenbaoMima">
+            <summary>
+            *申报密码
+            <para>
+            如果是浙江用户，这里填入网税系统用户密码
+            </para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Auth.TokenResponseModel">
+            <summary>
+            Token响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Auth.TokenResponseModel.AccessToken">
+            <summary>
+            访问令牌
+            <para>后续访问其他API必须要带的</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Auth.TokenResponseModel.RefreshToken">
+            <summary>
+            刷新令牌
+            <para>用于access_token过期时通过刷新重新获取access_token</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Auth.TokenResponseModel.ExpiresIn">
+            <summary>
+            过期时间（单位：秒）
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Auth.TokenResponseModel.TokenType">
+            <summary>
+            令牌类型 例如：Bearer
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.BusinessAcceptedModel">
+            <summary>
+            业务受理模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.BusinessAcceptedModel.AcceptId">
+            <summary>
+            受理ID
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.IBusinessResponseModel">
+            <summary>
+            声明正确的业务返回模型
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.ResponseModel">
+            <summary>
+            响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.ResponseModel.ResultCode">
+            <summary>
+            返回状态
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.ResponseModel.Message">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Response`1.BusinessResponseContent">
+            <summary>
+            业务返回内容
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Response`1.ExistsBusinessResponseContent">
+            <summary>
+            存在有效的业务响应
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.CumulativeTaxDataResponseModel">
+            <summary>
+            累计算税数据查询响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.CumulativeTaxDataResponseModel.AcceptId">
+            <summary>
+            算税任务受理ID
+            <para>
+            和算税服务输出的一致，回调时客户系统通过该ID匹配
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.CumulativeTaxDataResponseModel.PersonnelNormalSalaryInfoList">
+            <summary>
+            返回带有累计算税数据的人员列表
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersionnelSubmissionStatusResponseModel">
+            <summary>
+            人员信息报送状态查询响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersionnelSubmissionStatusResponseModel.ErrorInfo">
+            <summary>
+            人员报送处理过程的错误信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersionnelSubmissionStatusResponseModel.AcceptId">
+            <summary>
+            *受理ID
+            </summary>
+            <remarks>
+            人员报送受理ID。和报送服务输出的一致，回调时客户系统通过该ID匹配
+            </remarks>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersionnelSubmissionStatusResponseModel.AreaId">
+            <summary>
+            行政区划代码 <para>企业所属地区行政区划代码</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersionnelSubmissionStatusResponseModel.PersinnelSubmissionResults">
+            <summary>
+            报送结果 报送/反馈成功时包含此内容
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult">
+            <summary>
+            人员报送结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.Xingming">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.ZhengzhaoLeixing">
+            <summary>
+            证照类型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.ZhengzhaoHaoma">
+            <summary>
+            证照号码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.ZiranrenDengjiXuhao">
+            <summary>
+            自然人登记序号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.ZiranrenDangAnHao">
+            <summary>
+            自然人档案号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.ZiranrenNashuirenShibiehao">
+            <summary>
+            自然人纳税人识别号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.RenyuanShujuRukuZhuangtai">
+            <summary>
+            人员数据入库状态 <para>0-成功；-1-失败；1-有提示</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.RenyuanBaosongZhuangtai">
+            <summary>
+            人员报送状态
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.RenyuanYanzhengZhuangtai">
+            <summary>
+            人员验证状态
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.ShibaiYuanyin">
+            <summary>
+            失败原因
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.KaihuYinhang">
+            <summary>
+            开户银行
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.YinhangZhanghao">
+            <summary>
+            银行账号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.KaihuYinhangSheng">
+            <summary>
+            开户银行省份
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.YinhangZhanghaoYanzhengZhuangtai">
+            <summary>
+            银行账号验证状态
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.PersinnelSubmissionResult.YinhangZhanghaoYanzhengXinxi">
+            <summary>
+            银行账号验证信息
+            </summary>
+            <remarks>
+            核验失败原因内容有：
+            <list type="number">
+            <item>输入的卡号无效</item>
+            <item>卡状态不正确</item>
+            <item>持卡人身份信息或手机号输入不正确</item>
+            <item>银行卡暂不支持该业务</item>
+            <item>银行卡未开通认证支付</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo">
+            <summary>
+            企业税务信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.NashuirenShibiehao">
+            <summary>
+            *扣缴单位纳税人识别号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.DengjiXuhaoId">
+            <summary>
+            纳税人登记序号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.ZhuguanShuiwuJiguanMingCheng">
+            <summary>
+            主管税务机关名称
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.DengjiZhuceMingCheng">
+            <summary>
+            登记注册名称
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.LianxiDianhua">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.LianxiDizhi">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.EnterpriseTaxInfo.DengjiRiqi">
+            <summary>
+            登记日期
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxCalculationResponseModel">
+            <summary>
+            税款计算查询服务响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxCalculationResponseModel.AcceptId">
+            <summary>
+            算税任务受理ID
+            <para>
+            和算税服务输出的一致，回调时客户系统通过该ID匹配
+            </para>
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationCancelStatusResponseModel">
+            <summary>
+            个税申报作废状态查询响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationCancelStatusResponseModel.AcceptId">
+            <summary>
+            作废任务受理ID
+            <para>
+            和申报作废服务输出的一致，回调时客户系统通过该ID匹配
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationCancelStatusResponseModel.YukouYujiaoShenbaoJieguo">
+            <summary>
+            综合所得预扣预缴申报表申报结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationCancelStatusResponseModel.FenleiSuodeShenbaoJieguo">
+            <summary>
+            一般分类所得申报表申报结果，json对象
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationCancelStatusResponseModel.FeiJuminShenbaoJieguo">
+            <summary>
+            非居民所得申报表申报结果
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult">
+            <summary>
+            申报作废结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.ZongJinE">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.ZongRenshu">
+            <summary>
+            总人数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.YingNashuie">
+            <summary>
+            应纳税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.ShenbaoBiaozhi">
+            <summary>
+            申报标志
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.ZuofeiBiaozhi">
+            <summary>
+            作废标志
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.ZuofeiPicihao">
+            <summary>
+            作废批次号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationCancelResult.ErrorInfo">
+            <summary>
+            申报表信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationStatusResponseModel">
+            <summary>
+            个税申报状态查询响应模型
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationStatusResponseModel.AcceptId">
+            <summary>
+            申报任务受理ID
+            <para>
+            和申报服务输出的一致，回调时客户系统通过该ID匹配
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationStatusResponseModel.YukouYujiaoShenbaoJieguo">
+            <summary>
+            综合所得预扣预缴申报表申报结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationStatusResponseModel.FenleiSuodeShenbaoJieguo">
+            <summary>
+            一般分类所得申报表申报结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.TaxDeclarationStatusResponseModel.FeiJuminShenbaoJieguo">
+            <summary>
+            非居民所得申报表申报结果
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult">
+            <summary>
+            申报表申报结果
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.ZongJinE">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.ZongRenshu">
+            <summary>
+            总人数
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.YingNashuie">
+            <summary>
+            应纳税额
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.ShenbaoBiaozhi">
+            <summary>
+            申报标志
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.ShenbaoFankuiBiaozhi">
+            <summary>
+            申报反馈标志
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.ShenbaoFankuiXinxi">
+            <summary>
+            申报反馈信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.KoukuanFankuiBiaozhi">
+            <summary>
+            扣款反馈标志
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.KoukuanFankuiXinxi">
+            <summary>
+            扣款反馈信息
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ApiParameterModels.Response.Tax.DeclarationResult.ErrorInfo">
+            <summary>
+            申报表起劲信息
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Api.AuthClient">
+            <summary>
+            权鉴相关请求
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.AuthClient.#ctor(BM.XiaoAi.ApiClient.ApiContract.IAuthContract)">
+            <summary>
+            权鉴Client
+            </summary>
+            <param name="authContract"></param>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.AuthClient.GetToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            获取token <see cref="M:BM.XiaoAi.ApiClient.ApiContract.IAuthContract.GetToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.GetTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.AuthClient.RefreshToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.RefreshTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            刷新token <see cref="M:BM.XiaoAi.ApiClient.ApiContract.IAuthContract.RefreshToken(BM.XiaoAi.ApiClient.ApiParameterModels.Request.Auth.RefreshTokenRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Api.TaxClient">
+            <summary>
+            个税相关请求
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.#ctor(BM.XiaoAi.ApiClient.ApiContract.ITaxContract)">
+            <summary>
+            个税Client
+            </summary>
+            <param name="taxContract"></param>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.PersonnelSubmission(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.PersonnelInfoSubmissionRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            人员报送服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.PersonnelSubmission(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.PersonnelInfoSubmissionRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.GetPersonnelSubmissionResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            人员报送状态查询 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetPersonnelSubmissionResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="acceptId"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.TaxCalculation(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            税款计算服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxCalculation(System.String,System.String,System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxCalculationRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="acceptId"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.GetTaxCalculationResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            税款计算查询服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxCalculationResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="skjsAcceptId">算税任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.CumulativeTaxDataDownload(System.String,System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            累计算税数据下载 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.CumulativeTaxDataDownload(System.String,System.String,System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.CumulativeTaxDataDownloadRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="acceptId">人员报送反馈受理ID</param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.GetCumulativeTaxData(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            累计算税数据下载查询 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetCumulativeTaxData(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="ljssAcceptId">累计算税数据下载任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.TaxDeclaration(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxDeclaration(System.String,BM.XiaoAi.ApiClient.ApiParameterModels.Request.Tax.TaxDeclarationRequestModel,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="requestModel"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.GetTaxDeclarationResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报状态查询服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxDeclarationResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sbrwAcceptId">申报任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.TaxDeclarationFeedback(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报反馈服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.TaxDeclarationFeedback(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sbrwAcceptId">申报任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.GetTaxDeclarationFeedbackResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个税申报反馈状态查询服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxDeclarationFeedbackResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="sbfkrwAcceptId">申报反馈任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Api.TaxClient.GetTaxDeclarationCancelResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+            <summary>
+            个数申报作废状态查询服务 <see cref="M:BM.XiaoAi.ApiClient.ApiContract.ITaxContract.GetTaxDeclarationCancelResults(System.String,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="bearerToken"></param>
+            <param name="zfrwAcceptId">作废任务受理ID</param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Attributes.ApiParameterNameAttribute">
+            <summary>
+            在请求中使用的参数名
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Attributes.ApiParameterNameAttribute.#ctor(System.String)">
+            <summary>
+            定义真实发起请求的参数名
+            </summary>
+            <param name="name">接口真实的参数名</param>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.ClientSettings">
+            <summary>
+            客户端设置
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ClientSettings.ClientId">
+            <summary>
+            客户端Id（小爱提供）
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.ClientSettings.ClientSecret">
+            <summary>
+            客户端访问秘钥（小爱提供）
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.ClientSettings.CreateGetTokenRequestModel">
+            <summary>
+            生成获取Token请求模型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Converters.BooleanChineseStringConverter">
+            <summary>
+            定义布尔值和中文字符转化
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.Converters.BooleanChineseStringConverter.InternalOnly">
+            <summary>
+            仅在Api内部有效
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Converters.EnumValueStringConverter">
+            <summary>
+            定义枚举值和字符串值转化
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.Converters.EnumValueStringConverter.InternalOnly">
+            <summary>
+            仅在Api内部有效
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.Administrative">
+            <summary>
+            行政区划字典
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.PersonnelSubmissionStatus">
+            <summary>
+            人员报送状态
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.PersonnelVerificationStatus">
+            <summary>
+            人员验证状态
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.BankAccountVerificationStatus">
+            <summary>
+            银行账号验证状态
+            </summary>
+        </member>
+        <member name="F:BM.XiaoAi.ApiClient.Enums.BankAccountVerificationStatus.未验证">
+            <summary>
+            -1代表人员报送过程存在问题，没有进行到验证银行状态这一步骤
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.IncomeItem">
+            <summary>
+            所得项目代码
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.DeclarationFlag">
+            <summary>
+            申报标志
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.FeedbackFlag">
+            <summary>
+            反馈标志
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.DeductionFlag">
+            <summary>
+            扣款标志
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.CancellationFlag">
+            <summary>
+            作废标志
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.LicenseType">
+            <summary>
+            证照类型字典
+            </summary>
+        </member>
+        <member name="F:BM.XiaoAi.ApiClient.Enums.LicenseType.外国人工作许可证_A">
+            <summary>
+            外国人工作许可证（A类）——注意这个括号是大写的
+            </summary>
+        </member>
+        <member name="F:BM.XiaoAi.ApiClient.Enums.LicenseType.外国人工作许可证_B">
+            <summary>
+            外国人工作许可证（B类）——注意这个括号是大写的
+            </summary>
+        </member>
+        <member name="F:BM.XiaoAi.ApiClient.Enums.LicenseType.外国人工作许可证_C">
+            <summary>
+            外国人工作许可证（C类）——注意这个括号是大写的
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.Education">
+            <summary>
+            学历字典
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Enums.EmploymentType">
+            <summary>
+            任职受雇从业类型
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Extension.ModelExtension">
+            <summary>
+            模型扩展方法
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Extension.ModelExtension.NameOfApiParameter``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            获取属性在接口交互时对应的参数名
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="source"></param>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.Filters.ExtraRequestUriPathFilterAttribute">
+            <summary>
+            额外的请求路径
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.Filters.ExtraRequestUriPathFilterAttribute.AppendRequestUriPath(WebApiClient.Contexts.ApiActionContext)">
+            <summary>
+            追加请求路径
+            </summary>
+            <param name="context"></param>
+            <returns>请求上下文</returns>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.TaxSettings">
+            <summary>
+            报税设置
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TaxSettings.ShuiHao">
+            <summary>
+            税号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TaxSettings.DengjiXuhao">
+            <summary>
+            登记序号
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TaxSettings.ShenbaoMima">
+            <summary>
+            申报密码
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TaxSettings.Administrative">
+            <summary>
+            行政区划代码
+            </summary>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.TokenSettings">
+            <summary>
+            token配置
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TokenSettings.AccessToken">
+            <summary>
+            访问令牌
+            <para>后续访问其他API必须要带的</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TokenSettings.RefreshToken">
+            <summary>
+            刷新令牌
+            <para>用于access_token过期时通过刷新重新获取access_token</para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TokenSettings.ExpiresIn">
+            <summary>
+            过期时间（单位：秒）
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.TokenSettings.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobal.GlobalConfig">
+            <summary>
+            静态的全局配置信息
+            </summary>
+        </member>
+        <member name="M:BM.XiaoAi.ApiClient.XiaoAiGlobal.InitializeDefaultConfig(System.Action{BM.XiaoAi.ApiClient.XiaoAiGlobalConfig})">
+            <summary>
+            初始化全局配置
+            <para>在没有DI的情况下可以使用它来初始化配置</para>
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig">
+            <summary>
+            小爱全局配置
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.ProductionEnvironmentApiUri">
+            <summary>
+            生产环境Uri
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.TestingEnvironmentApiUri">
+            <summary>
+            测试环境Uri
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.Test">
+            <summary>
+            使用测试环境，默认false
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.ApiUri">
+            <summary>
+            Api地址
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.DefaultXiaoAiClientSettings">
+            <summary>
+            默认的小爱客户端配置
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.DefaultXiaoAiTaxSettings">
+            <summary>
+            默认的小爱报税配置
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.UseLog">
+            <summary>
+            启用日志，默认false
+            <para>
+            将会在日志中记录请求内容
+            </para>
+            </summary>
+        </member>
+        <member name="P:BM.XiaoAi.ApiClient.XiaoAiGlobalConfig.ApiActionFilters">
+            <summary>
+            全局拦截器集合
+            </summary>
+        </member>
+    </members>
+</doc>
